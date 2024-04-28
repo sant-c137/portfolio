@@ -1,0 +1,182 @@
+.WebLayout {
+  background-color: #10151d;
+  height: 20rem;
+  width: 30rem;
+  border-radius: 1rem;
+  border: 0.06rem solid #10151d;
+  /* box-shadow: 0px 0px 400px rgba(255, 0, 0, 1),
+    0px 0px 400px rgba(255, 0, 230, 1); */
+
+    transition: all .3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+}
+
+.WebLayout-header {
+  width: 100%;
+  height: 8%;
+  background-color: rgb(255, 255, 255);
+  background-color: #2e3c51;
+  border-radius: 1rem 1rem 0rem 0rem;
+  display: flex;
+  align-items: center;
+  padding:  0.8rem 1.5rem;
+  gap: 0.3rem;
+}
+
+.WebLayout-color-1 {
+  margin-left: auto;
+  background-color: #f45e58;
+  background-color: #10151d;
+
+}
+.WebLayout-color-2 {
+  background-color: #fd9d3a;
+  background-color: #10151d;
+
+}
+.WebLayout-color-3 {
+  background-color: #43d65b;
+  background-color: #10151d;
+
+}
+
+.WebLayout-icons-nav {
+  border-radius: 50%;
+  height: 0.6rem;
+  width: 0.6rem;
+
+  border-radius: 0.06rem solid black;
+}
+.WebLayout-search-bar {
+  width: 100%;
+  height: 8%;
+  background-color: rgb(255, 255, 255);
+  background-color: #10151d;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  gap: 0.3rem;
+}
+
+.Refresh {
+  transform: scaleX(-1);
+  height: 1rem;
+  padding: 1px;
+  transition: all 0.3s ease-in-out;
+  background-color: #10151d;
+  border-radius: 0.3rem;
+
+  &:hover {
+    background-color: #4a6182;
+  }
+}
+
+.Arrow-Left {
+  height: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #10151d;
+  border-radius: 0.3rem;
+
+  &:hover {
+    background-color: #4a6182;
+  }
+}
+
+.Arrow-Right {
+  transform: scaleX(-1);
+  height: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #10151d;
+  border-radius: 0.3rem;
+
+  &:hover {
+    background-color: #4a6182;
+  }
+}
+
+.Search-bar {
+  background-color: #2e3c51;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-family: system-ui, sans-serif;
+  color: #808c9c;
+  padding: 0.5% 40% 0.5% 4%;
+  height: 1.3rem;
+  text-decoration: none;
+}
+
+.ToWeb {
+  margin-left: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ArrowToWeb {
+  transition: all 0.3s ease-in-out;
+  background-color: #10151d;
+  border-radius: 0.3rem;
+  height: 1.1rem;
+
+
+  &:hover {
+    background-color: #4a6182;
+  }
+}
+
+.WebLayout-window {
+  background-color: #013c9b;
+  background-color: #10151d;
+  font-size: 0.6rem;
+  border-radius: 0.3rem;
+  height: 1.3rem;
+  padding: 1% 20% 1% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+
+  font-family: system-ui, sans-serif;
+  color: #808c9c;
+
+  & img {
+    height: 0.7rem;
+  }
+}
+
+.Plus {
+  transition: all 0.3s ease;
+  background-color: #2e3c51;
+  border-radius: 50%;
+  height: 1.1rem;
+
+  
+  &:hover {
+    background-color: #4e6589;
+  }
+
+}
+
+
+.WebLayout-image-container {
+  height: 84%;
+  width: 100%;
+  background-color: #003b94;
+  background-color: #2e3c51;
+  border-radius: 0rem 0rem 1rem 1rem;
+  overflow: auto;
+
+  scrollbar-width: none;
+
+  & img {
+    width: 100%;
+  }
+
+  &:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #10151d transparent;
+  }
+}

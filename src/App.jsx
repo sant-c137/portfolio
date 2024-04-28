@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { CardSkills } from './components/CardSkills';
-import { CardProjects } from './components/CardProjects';
+import { WebLayout } from './components/WebLayout';
+import { Title } from './components/Title';
+
 import './App.css';
 
 function App() {
@@ -109,47 +111,70 @@ function App() {
       <div className="child color-5 zoomElement">5</div>
       <div className="child color-6 zoomElement">6</div>
 
-      {/* <div className="child color-1 zoomElement">1</div>
-      <div className="child color-2 zoomElement">2</div>
-      <div className="child color-3 zoomElement">3</div>
-      <div className="child color-4 zoomElement">4</div>
-      <div className="child color-5 zoomElement">5</div>
-      <div className="child color-6 zoomElement">6</div> */}
-      {/*       
       <div className="child color-1 zoomElement">1</div>
       <div className="child color-2 zoomElement">2</div>
       <div className="child color-3 zoomElement">3</div>
       <div className="child color-4 zoomElement">4</div>
       <div className="child color-5 zoomElement">5</div>
-      <div className="child color-6 zoomElement">6</div> */}
+      <div className="child color-6 zoomElement">6</div>
+
+      <div className="child color-1 zoomElement">1</div>
+      <div className="child color-2 zoomElement">2</div>
+      <div className="child color-3 zoomElement">3</div>
+      <div className="child color-4 zoomElement">4</div>
+      <div className="child color-5 zoomElement">5</div>
+      <div className="child color-6 zoomElement">6</div>
 
       <div className="banner">
-        <div>
+        <div className="Title">
           <span>Hola, soy</span>
-          <h1>&nbsp;Tiago</h1>
+          <h1>&nbsp; Tiago</h1>
+
+          <img src="Profile.png" alt="" className="Profile" />
         </div>
-
         <p>
-          Estudiante de la carrera de <strong>ingenieria de software</strong>,
+          Estudiante de la carrera de <strong>ingeniería de software</strong>,
           apasionado por <strong>aprender</strong> y <strong>crear </strong>
-          las tecnologias que facilitan nuestra vida.
+          las tecnologías que facilitan nuestra vida.
         </p>
+        <br />
+        <br />
 
-        <h1 className="projects">Proyectos</h1>
+        <Title
+        
+        name={"Projects"}
+        color1={"red"}
+        color2={"blue"}
+        image={"Projects.svg"}
+        
+        
+        />
+
+        <hr />
+        <br />
 
         <div className="projects-container">
-          <CardProjects></CardProjects>
+          <WebLayout></WebLayout>
+          <WebLayout></WebLayout>
+          <WebLayout></WebLayout>
         </div>
-        <ul>
-          <li>Proyecto 1</li>
-          <li>Proyecto 2</li>
-        </ul>
 
-        <h1 className="skills">Habilidades</h1>
+        <br />
+        <div className="Title-container">
+          <img src="Skills.svg" alt="" />
+          <h1>Habilidades</h1>
+        </div>
+
+        <hr />
+        <br />
 
         <div className="skills-container">
-          <h1>Frontend</h1>
-          <div  className='skills-container-div'>
+          <div className="Title-container">
+            <img src="Learning.svg" alt="" />
+            <h1>Frontend</h1>
+          </div>
+
+          <div className="skills-container-div">
             <CardSkills
               image="HTML.svg"
               name="HTML"
@@ -167,9 +192,13 @@ function App() {
               color="#00D8FF"
             ></CardSkills>
           </div>
+          <br />
+          <div className="Title-container">
+            <img src="Learning.svg" alt="" />
+            <h1>Backend</h1>
+          </div>
 
-          <h1>Backend</h1>
-          <div>
+          <div className="skills-container-div">
             <CardSkills
               image="NodeJS.svg"
               name="NodeJS"
@@ -180,7 +209,7 @@ function App() {
               name="Postman"
               color="#ff6c37"
             ></CardSkills>
-            <CardSkills 
+            <CardSkills
               image="ExpressJS.svg"
               name="ExpressJS"
               color="#000"
@@ -192,24 +221,64 @@ function App() {
             ></CardSkills>
           </div>
         </div>
+        <br />
 
-        <h1 className="about-me">Sobre mi</h1>
+        <div className="Title-container">
+          <img src="AboutME.svg" alt="" />
+          <h1>Sobre mi</h1>
+        </div>
+
+        <hr />
+        <br />
+
         <p>
-          Me llamo Tiago Montaño y soy un estudiante de Ingeniería de Software
-          apasionado por aprender las tecnologías web. Actualmente estoy
-          enfocado en aprender a profundidad tecnologías web del ámbito del
-          frontend para posteriormente aprender backend. Ya que cada vez que
+          Me llamo Santiago Montaño y soy un estudiante de Ingeniería de
+          Software apasionado por aprender las tecnologías web. Actualmente
+          estoy enfocado en aprender a profundidad tecnologías web del ámbito
+          del frontend para posteriormente aprender backend. Ya que cada vez que
           aprendo algo nuevo me doy cuenta que estoy en donde quiero estar.
         </p>
+        <br />
 
-        <h1 className="contact">Contacto</h1>
+        <div className="Title-container">
+          <img src="Contact.svg" alt="" />
+          <h1>Contacto</h1>
+        </div>
 
+        <hr />
+        <br />
+
+        <div className="projects-container">
+          <a
+            href="https://www.linkedin.com/in/santiago-monta%C3%B1o-38a786144/"
+            style={{ textDecoration: 'none' }}
+            target="_blank"
+            >
+            <CardSkills image="Linkedin.svg" name="LinkedIn" color="#0a66c2" />
+          </a>
+
+          <a
+            href="https://github.com/sant-c137"
+            style={{ textDecoration: 'none' }}
+            target="_blank"
+          >
+            <CardSkills image="Github.svg" name="Github" color="#000" />
+          </a>
+
+          <a
+            href="mailto:santiam234@gmail.com"
+            style={{ textDecoration: 'none' }}
+            target="_blank"
+          >
+            <CardSkills image="Mail.svg" name="Email" color="#1c274c" />
+          </a>
+        </div>
+        <br />
+        <hr />
         <footer>
-          <span>@2024 Hecho por Tiago amor 🩵 </span>
-          <ul>
-            <li>Sobre mi</li>
-            <li>Contacto</li>
-          </ul>
+          <span>Casi todos los derechos reservados.</span>
+          <span> Hecho con 🩵 por Sant.</span>
+          <span>@2024</span>
         </footer>
       </div>
     </div>

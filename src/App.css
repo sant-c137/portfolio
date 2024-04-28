@@ -6,33 +6,38 @@
 
 .container {
   position: relative;
-  width: 98.9vw;
-  /* width: 100vw; */
+  width: 100%;
   min-height: 100vh;
   background-color: #05213f;
   background-color: #201e1e;
 }
 
+.Profile {
+  height: 10rem;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 254, 59, 1);
+  margin-left: auto;
+  background-image: linear-gradient(-45deg, #bd34fe 100%, #47caff 100%);
+}
+
+
 .banner {
   width: 100%;
   min-height: 100vh;
 
-  border: 4px solid rgb(6, 18, 68);
-  border: 4px solid rgb(0, 0, 0);
-
   backdrop-filter: blur(30px);
   font-size: 5rem;
   font-family: 'Bebas Neue', sans-serif;
-  padding: 0% 8%;
+  padding: 20% 22% 1% 22%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  & div {
+  & .Title {
     display: flex;
+    flex-direction: row;
 
     & h1 {
+      display: inherit;
       font-size: inherit;
       font-family: inherit;
       background: -webkit-linear-gradient(
@@ -46,6 +51,7 @@
     }
 
     & span {
+      display: inherit;
       font-size: inherit;
       font-family: inherit;
       font-size: inherit;
@@ -56,7 +62,7 @@
     font-family: monospace;
     font-size: 1rem;
     color: white;
-    width: 30rem;
+    max-width: 30rem;
 
     & strong {
       font-size: 1.2rem;
@@ -66,27 +72,8 @@
 }
 
 h1 {
-  font-size: inherit;
-  font-family: inherit;
-  background: -webkit-linear-gradient(
-    120deg,
-    rgba(0, 254, 59, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.projects {
-  background: -webkit-linear-gradient(
-    90deg,
-    rgb(51, 204, 255) 0%,
-    rgb(255, 51, 204) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  color: #8d93a5;
 }
 
 .skills {
@@ -102,26 +89,27 @@ h1 {
 .skills-container {
   display: flex;
   flex-direction: column;
+}
 
-  & skills-container-div {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.skills-container-div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 
-    width: 150px;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+
+  gap: 1rem;
 }
 
 .about-me {
@@ -135,7 +123,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.contact {
+contact {
   background: -webkit-linear-gradient(
     90deg,
     rgb(51, 255, 153) 0%,
@@ -181,11 +169,13 @@ h1 {
 }
 
 footer {
-  color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
   font-size: 1rem;
-  gap: 20rem;
+  gap: 10%;
 
   & ul {
     display: flex;
@@ -203,21 +193,5 @@ footer {
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .container {
-    background-color: #ffffff;
-  }
-  .banner {
-    & div {
-      & span {
-        color: #05213f;
-      }
-    }
-    & p {
-      color: #05213f;
-    }
   }
 }
