@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-
   color: #05213f;
 
   & img {
@@ -12,28 +11,4 @@
   & h1 {
     transition: all 0.3s ease-in-out;
   }
-
-  /* &:hover {
-    img {
-      border: 1px solid red;
-
-      svg {
-        path {
-          fill: red;
-        }
-      }
-    }
-
-    h1 {
-      color: #bd34fe;
-    } 
-   } */
-}
-
-.Title-container img svg path {
-  fill: #e10000;
-}
-
-.Title-container img svg path:first-child {
-  fill: aqua;
 }

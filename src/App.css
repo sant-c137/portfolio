@@ -13,13 +13,13 @@
 }
 
 .Profile {
-  height: 10rem;
-  border-radius: 50%;
-  border: 3px solid rgb(0, 254, 59, 1);
-  margin-left: auto;
-  background-image: linear-gradient(-45deg, #bd34fe 100%, #47caff 100%);
-}
+  height: 20rem;
 
+  border-radius: 50%;
+  margin-left: auto;
+
+  box-shadow: 0rem 0rem 8rem rgba(0, 254, 59, 0.384);
+}
 
 .banner {
   width: 100%;
@@ -28,13 +28,22 @@
   backdrop-filter: blur(30px);
   font-size: 5rem;
   font-family: 'Bebas Neue', sans-serif;
-  padding: 20% 22% 1% 22%;
+  padding: 15% 22% 1% 22%;
   display: flex;
   flex-direction: column;
 
   & .Title {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    & div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     & h1 {
       display: inherit;
@@ -112,6 +121,21 @@ h1 {
   gap: 1rem;
 }
 
+/* .projects-container-show {
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: width .3s ease-in-out;
+
+  width: auto;
+
+  &:hover {
+    width: 100%;
+  }
+} */
+
+
+
 .about-me {
   background: -webkit-linear-gradient(
     90deg,
@@ -136,7 +160,9 @@ contact {
 
 .child {
   width: 100px;
+  width: 6rem;
   height: 100px;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,5 +219,19 @@ footer {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (width < 1190px) {
+  .Title {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+
+  .Profile {
+    margin: 0;
+    margin: 2rem;
+    width: 20rem;
+    height: 20rem;
   }
 }

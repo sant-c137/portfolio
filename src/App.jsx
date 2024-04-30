@@ -127,41 +127,47 @@ function App() {
 
       <div className="banner">
         <div className="Title">
-          <span>Hola, soy</span>
-          <h1>&nbsp; Tiago</h1>
+          <div>
+            <span>Hola, soy&nbsp;</span>
+            <h1>Sant</h1>
 
-          <img src="Profile.png" alt="" className="Profile" />
+            <p>
+              Estudiante de la carrera de{' '}
+              <strong>ingeniería de software</strong>, apasionado por{' '}
+              <strong>aprender</strong> y <strong>crear </strong>
+              las tecnologías que facilitan nuestra vida.
+            </p>
+          </div>
+
+          <img src="Profile.webp" alt="" className="Profile" />
         </div>
-        <p>
-          Estudiante de la carrera de <strong>ingeniería de software</strong>,
-          apasionado por <strong>aprender</strong> y <strong>crear </strong>
-          las tecnologías que facilitan nuestra vida.
-        </p>
+
         <br />
         <br />
 
         <Title
-        
-        name={"Projects"}
-        color1={"red"}
-        color2={"blue"}
-        image={"Projects.svg"}
-        
-        
+          name={'Projects'}
+          color1={'red'}
+          color2={'blue'}
+          image={'Projects.svg'}
         />
 
         <hr />
         <br />
 
         <div className="projects-container">
-          <WebLayout></WebLayout>
-          <WebLayout></WebLayout>
-          <WebLayout></WebLayout>
+          <WebLayout
+            name={'Acit'}
+            url={'https://acit-frontend.vercel.app/'}
+            logo={'AcitLogo.svg'}
+            websiteImage={'Web_1.webp'}
+          />
         </div>
 
         <br />
         <div className="Title-container">
           <img src="Skills.svg" alt="" />
+
           <h1>Habilidades</h1>
         </div>
 
@@ -175,11 +181,7 @@ function App() {
           </div>
 
           <div className="skills-container-div">
-            <CardSkills
-              image="HTML.svg"
-              name="HTML"
-              color="#e34f26"
-            ></CardSkills>
+            <CardSkills image="HTML.svg" name="HTML" color="#e34f26" />
             <CardSkills image="CSS.svg" name="CSS" color="#0c73b8"></CardSkills>
             <CardSkills
               image="JavaScript.svg"
@@ -253,7 +255,7 @@ function App() {
             href="https://www.linkedin.com/in/santiago-monta%C3%B1o-38a786144/"
             style={{ textDecoration: 'none' }}
             target="_blank"
-            >
+          >
             <CardSkills image="Linkedin.svg" name="LinkedIn" color="#0a66c2" />
           </a>
 

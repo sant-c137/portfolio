@@ -3,6 +3,9 @@
   color-scheme: dark;
 }
 
+html {
+  min-width: 350px;
+}
 
 @media (width < 510px) {
   :root {
@@ -10,12 +13,13 @@
   }
 
   .banner {
-  padding: 80% 8% 1% 8% ;
+  padding: 20% 8% 1% 8% ;
 
   /* jikah66633@idsho.com */
 
   }
 }
+
 
 /* @media (prefers-color-scheme: light) {
   .container {
