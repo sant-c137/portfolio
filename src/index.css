@@ -1,10 +1,100 @@
 :root {
   font-size: 16px;
   color-scheme: dark;
+
+  --banner-bg-color: #201e1e;
+
+  --gradient-color1: #00fe3b;
+  --gradient-color2: #00d4ff;
+  --gradient-direction: 120deg;
+
+  --main-background-color: #2e3c51;
+  --primary-color: #10151d;
+  --border-color: #05213f;
+  --hover-color: #4a6182;
+  --text-color: #fff;
+  --sub-title-color: var(--gradient-color2);
+  --highlight-color: #00e7a5;
+
+  --shape-color-1: #ff33cc;
+  --shape-color-2: #33ccff;
+  --shape-color-3: #ffcc33;
+  --shape-color-4: #33ff99;
+  --shape-color-5: #cc33ff;
+  --shape-color-6: #99ff33;
+
+  --font-main-title: 'Bebas Neue', sans-serif;
+  --font-titles: 'Cairo Variable', sans-serif;
+  --font-body: 'Montserrat Variable', sans-serif;
+
+  --image-profile-shadow: 0rem 0rem 8rem #00fe3b62;
+  --card-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4),
+    -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 }
 
-html {
-  min-width: 350px;
+::selection {
+  background-color: #4a6182;
+  color: aquamarine;
+}
+
+.banner {
+  cursor: image-set(url('download.png') 2x) 9 6, pointer;
+}
+
+@media (width < 400px) {
+  .color-7 {
+    display: none;
+  }
+  .color-8 {
+    display: none;
+  }
+  .color-9 {
+    display: none;
+  }
+  .color-10 {
+    display: none;
+  }
+  .color-11 {
+    display: none;
+  }
+  .color-12 {
+    display: none;
+  }
+
+  .color-13 {
+    display: none;
+  }
+  .color-14 {
+    display: none;
+  }
+  .color-15 {
+    display: none;
+  }
+  .color-16 {
+    display: none;
+  }
+  .color-17 {
+    display: none;
+  }
+  .color-18 {
+    display: none;
+  }
+}
+
+@media (width < 900px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media (width < 750px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .banner {
+    padding: 15% 8% 1% 8%;
+  }
 }
 
 @media (width < 510px) {
@@ -13,14 +103,35 @@ html {
   }
 
   .banner {
-  padding: 20% 8% 1% 8% ;
-
-  /* jikah66633@idsho.com */
-
+    padding: 20% 8% 1% 8%;
   }
 }
 
+@media (width < 430px) {
+  :root {
+    font-size: 9px;
+  }
+}
 
+@media (width < 370px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media (width < 300px) {
+  :root {
+    font-size: 6px;
+  }
+}
+
+@media (width < 200px) {
+  :root {
+    font-size: 4px;
+  }
+}
+
+/* jikah66633@idsho.com */
 /* @media (prefers-color-scheme: light) {
   .container {
     background-color: #ffffff;

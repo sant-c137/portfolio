@@ -1,6 +1,18 @@
 import './WebLayout.css';
 
-export const WebLayout = ({ name, url, logo, websiteImage }) => {
+export const WebLayout = ({
+  name,
+  url,
+  logo,
+  websiteImage,
+  description,
+  frontApp1,
+  frontApp2,
+  frontApp3,
+  backApp1,
+  backApp2,
+  backApp3,
+}) => {
   return (
     <>
       <div className="projects-container-show">
@@ -35,27 +47,23 @@ export const WebLayout = ({ name, url, logo, websiteImage }) => {
 
         <div className="info-projects">
           <h2>Acerca del proyecto:</h2>
-          <p>
-            Este proyecto fue creado para una empresa cuyo enfoque era crear una
-            plataforma de cursos online acerca de las tecnologías de la
-            información.
-          </p>
+          <p>{description}</p>
           <h2>Tecnologías usadas:</h2>
 
           <div className="tools-container">
             <div className="frontend-tools">
-              <h3>Frontend</h3>
+             
 
-              <img src="HTML.svg" alt="" />
-              <img src="JavaScript.svg" alt="" />
-              <img src="CSS.svg" alt="" />
-            </div>
+              <div className="tools-container-cards">
+                <img src={frontApp1} alt="" />
+                <img src={frontApp2} alt="" />
+                <img src={frontApp3} alt="" />
+                <img src={backApp1} alt="" />
+                <img src={backApp2} alt="" />
+                <img src={backApp3} alt="" />
 
-            <div className="backend-tools">
-              <h3>Backend</h3>
-              <img src="NodeJS.svg" alt="" />
-              <img src="MySQL.svg" alt="" />
-              <img src="Postman.svg" alt="" />
+              </div>
+            
             </div>
           </div>
         </div>

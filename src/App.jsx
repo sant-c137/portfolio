@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { CardSkills } from './components/CardSkills';
 import { WebLayout } from './components/WebLayout';
-import { Title } from './components/Title';
+// import { Title } from './components/Title';
 
 import './App.css';
 
@@ -111,19 +111,19 @@ function App() {
       <div className="child color-5 zoomElement">5</div>
       <div className="child color-6 zoomElement">6</div>
 
-      <div className="child color-1 zoomElement">1</div>
-      <div className="child color-2 zoomElement">2</div>
-      <div className="child color-3 zoomElement">3</div>
-      <div className="child color-4 zoomElement">4</div>
-      <div className="child color-5 zoomElement">5</div>
-      <div className="child color-6 zoomElement">6</div>
+      <div className="child color-1 color-7 zoomElement">1</div>
+      <div className="child color-2 color-8 zoomElement">2</div>
+      <div className="child color-3 color-9 zoomElement">3</div>
+      <div className="child color-4 color-10 zoomElement">4</div>
+      <div className="child color-5 color-11 zoomElement">5</div>
+      <div className="child color-6 color-12 zoomElement">6</div>
 
-      <div className="child color-1 zoomElement">1</div>
-      <div className="child color-2 zoomElement">2</div>
-      <div className="child color-3 zoomElement">3</div>
-      <div className="child color-4 zoomElement">4</div>
-      <div className="child color-5 zoomElement">5</div>
-      <div className="child color-6 zoomElement">6</div>
+      <div className="child color-1 color-13 zoomElement">1</div>
+      <div className="child color-2 color-14 zoomElement">2</div>
+      <div className="child color-3 color-15 zoomElement">3</div>
+      <div className="child color-4 color-16 zoomElement">4</div>
+      <div className="child color-5 color-17 zoomElement">5</div>
+      <div className="child color-6 color-18 zoomElement">6</div>
 
       <div className="banner">
         <div className="Title">
@@ -145,12 +145,11 @@ function App() {
         <br />
         <br />
 
-        <Title
-          name={'Projects'}
-          color1={'red'}
-          color2={'blue'}
-          image={'Projects.svg'}
-        />
+        <div className="Title-container">
+          <img src="Projects.svg" alt="" />
+
+          <h1>Proyectos</h1>
+        </div>
 
         <hr />
         <br />
@@ -161,6 +160,28 @@ function App() {
             url={'https://acit-frontend.vercel.app/'}
             logo={'AcitLogo.svg'}
             websiteImage={'Web_1.webp'}
+            description={
+              'Este proyecto fue creado para una empresa cuyo enfoque era crear una plataforma de cursos de las tecnologías de la información.'
+            }
+            frontApp1={'HTML.svg'}
+            frontApp2={'CSS.svg'}
+            frontApp3={'JavaScript.svg'}
+            backApp1={'NodeJS.svg'}
+            backApp2={'Postman.svg'}
+            backApp3={'MySQL.svg'}
+          />
+
+          <WebLayout
+            name={'Bezier curves'}
+            url={'https://sant-c137.github.io/BezierCurvesJS/'}
+            websiteImage={'Web_2.webp'}
+            description={
+              'Este proyecto fue creado para crear una implementación gráfica e interactiva de las curvas de Bezier.'
+            }
+            frontApp1={'HTML.svg'}
+            frontApp2={'CSS.svg'}
+            frontApp3={'JavaScript.svg'}
+            backApp1={'NodeJS.svg'}
           />
         </div>
 
@@ -194,7 +215,8 @@ function App() {
               color="#00D8FF"
             ></CardSkills>
           </div>
-          <br />
+          {/* <br /> */}
+
           <div className="Title-container">
             <img src="Learning.svg" alt="" />
             <h1>Backend</h1>
@@ -214,7 +236,7 @@ function App() {
             <CardSkills
               image="ExpressJS.svg"
               name="ExpressJS"
-              color="#000"
+              color="#aaa"
             ></CardSkills>
             <CardSkills
               image="MySQL.svg"
@@ -231,16 +253,14 @@ function App() {
         </div>
 
         <hr />
-        <br />
 
-        <p>
+        <p className="About-me-text">
           Me llamo Santiago Montaño y soy un estudiante de Ingeniería de
           Software apasionado por aprender las tecnologías web. Actualmente
           estoy enfocado en aprender a profundidad tecnologías web del ámbito
           del frontend para posteriormente aprender backend. Ya que cada vez que
           aprendo algo nuevo me doy cuenta que estoy en donde quiero estar.
         </p>
-        <br />
 
         <div className="Title-container">
           <img src="Contact.svg" alt="" />
@@ -253,26 +273,17 @@ function App() {
         <div className="projects-container">
           <a
             href="https://www.linkedin.com/in/santiago-monta%C3%B1o-38a786144/"
-            style={{ textDecoration: 'none' }}
             target="_blank"
           >
             <CardSkills image="Linkedin.svg" name="LinkedIn" color="#0a66c2" />
           </a>
 
-          <a
-            href="https://github.com/sant-c137"
-            style={{ textDecoration: 'none' }}
-            target="_blank"
-          >
-            <CardSkills image="Github.svg" name="Github" color="#000" />
+          <a href="https://github.com/sant-c137" target="_blank">
+            <CardSkills image="Github.svg" name="Github" color="#aaa" />
           </a>
 
-          <a
-            href="mailto:santiam234@gmail.com"
-            style={{ textDecoration: 'none' }}
-            target="_blank"
-          >
-            <CardSkills image="Mail.svg" name="Email" color="#1c274c" />
+          <a href="mailto:santiam234@gmail.com" target="_blank">
+            <CardSkills image="Mail.svg" name="Email" color="#8d93a5" />
           </a>
         </div>
         <br />
