@@ -116,6 +116,21 @@ h1 {
 
 .projects-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin-bottom: 4rem; */
+
+  gap: 1rem;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.contact-container {
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;

@@ -60,12 +60,10 @@ export const WebLayout = ({
           <p>{description}</p>
           <h2>Tecnologías usadas:</h2>
 
-          <div className="tools-container">
-            <div className="tools-container-cards">
-              {images.map((tools, index) => (
-                <img key={index} src={tools} alt={`Image ${index}`} />
-              ))}
-            </div>
+          <div className="tools-container-cards">
+            {images.map((tools, index) => (
+              <img key={index} src={tools} alt={`Image ${index}`} />
+            ))}
           </div>
         </div>
       </div>
