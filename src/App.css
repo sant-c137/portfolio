@@ -79,7 +79,7 @@
     font-family: var(--font-body);
     font-size: 1rem;
     color: var(--text-color);
-
+    font-weight: 500;
     max-width: 30rem;
 
     & strong {
