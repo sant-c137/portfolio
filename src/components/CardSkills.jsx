@@ -1,6 +1,6 @@
 import './CardSkills.css';
 
-export const CardSkills = ({ image, name, color }) => {
+export const CardSkills = ({ image, name, color}) => {
   return (
     <>
       <div className="Card-div" style={{ '--color': color }}>

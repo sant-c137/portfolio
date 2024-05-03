@@ -16,6 +16,10 @@
   --sub-title-color: var(--gradient-color2);
   --highlight-color: #00e7a5;
 
+  --pagina-color-1: #ff5f57;
+  --pagina-color-2: #ffbd2e;
+  --pagina-color-3: #28ca42;
+
   --shape-color-1: #ff33cc;
   --shape-color-2: #33ccff;
   --shape-color-3: #ffcc33;
@@ -30,15 +34,14 @@
   --image-profile-shadow: 0rem 0rem 8rem #00fe3b62;
   --card-shadow: 8px 8px 24px 0 rgba(9, 13, 20, 0.4),
     -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
+
+  --section-background: #00e7a5;
 }
 
 ::selection {
-  background-color: #4a6182;
-  color: aquamarine;
-}
-
-.banner {
-  cursor: image-set(url('download.png') 2x) 9 6, pointer;
+  background-color: var(--section-background);
+  text-shadow: 0 0 0px var(--primary-color);
+  color: transparent;
 }
 
 @media (width < 400px) {
@@ -132,18 +135,35 @@
 }
 
 /* jikah66633@idsho.com */
-/* @media (prefers-color-scheme: light) {
-  .container {
-    background-color: #ffffff;
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --banner-bg-color: #ffffff;
+    --gradient-color1: #0107f3;
+    --gradient-color2: #05ef88;
+    --gradient-direction: 135deg;
+
+    --main-background-color: #f5f5f5;
+    --primary-color: #ffffff;
+    --border-color: #cccccc;
+    --hover-color: #e0e0e0;
+    --text-color: #000000;
+
+    --sub-title-color: #004ead;
+    --highlight-color: #004ead;
+
+    --shape-color-1: #ff3333;
+    --shape-color-2: #3333ff;
+    --shape-color-3: #ffcc00;
+    --shape-color-4: #33cc33;
+    --shape-color-5: #cc33cc;
+    --shape-color-6: #66cc00;
+
+    --image-profile-shadow: 0rem 0rem 8rem #0105f38b;
+    --card-shadow: 1px 1px 16px 0 #ccc;
+
+    --section-background: #049baf;
   }
-  .banner {
-    & div {
-      & span {
-        color: #05213f;
-      }
-    }
-    & p {
-      color: #05213f;
-    }
-  }
-} */
+}

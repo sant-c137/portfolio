@@ -1,11 +1,24 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CardSkills } from './components/CardSkills';
 import { WebLayout } from './components/WebLayout';
-// import { Title } from './components/Title';
-
 import './App.css';
 
 function App() {
+  const [theme, setTheme] = useState('');
+  const [year, setYear] = useState('');
+
+  useEffect(() => {
+    const prefersDarkMode =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    setTheme(prefersDarkMode);
+
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    setYear(currentYear);
+  }, []);
+
   useEffect(() => {
     function positionElements() {
       const container = document.querySelector('.container');
@@ -139,20 +152,23 @@ function App() {
             </p>
           </div>
 
-          <img src="Profile.webp" alt="" className="Profile" />
+          <img
+            src="Profile.webp"
+            alt="Santiago Montaño's profile picture"
+            className="Profile"
+          />
         </div>
 
         <br />
         <br />
 
         <div className="Title-container">
-          <img src="Projects.svg" alt="" />
+          <img src="Projects.svg" alt="Projects icon" />
 
           <h1>Proyectos</h1>
         </div>
 
-        <hr />
-        <br />
+        <hr className="margin-bottom" />
 
         <div className="projects-container">
           <WebLayout
@@ -163,47 +179,45 @@ function App() {
             description={
               'Este proyecto fue creado para una empresa cuyo enfoque era crear una plataforma de cursos de las tecnologías de la información.'
             }
-            frontApp1={'HTML.svg'}
-            frontApp2={'CSS.svg'}
-            frontApp3={'JavaScript.svg'}
-            backApp1={'NodeJS.svg'}
-            backApp2={'Postman.svg'}
-            backApp3={'MySQL.svg'}
+            images={[
+              'HTML.svg',
+              'CSS.svg',
+              'JavaScript.svg',
+              'NodeJS.svg',
+              'Postman.svg',
+              'MySQL.svg',
+            ]}
           />
 
           <WebLayout
             name={'Bezier curves'}
             url={'https://sant-c137.github.io/BezierCurvesJS/'}
+            logo={'AcitLogo.svg'}
             websiteImage={'Web_2.webp'}
             description={
               'Este proyecto fue creado para crear una implementación gráfica e interactiva de las curvas de Bezier.'
             }
-            frontApp1={'HTML.svg'}
-            frontApp2={'CSS.svg'}
-            frontApp3={'JavaScript.svg'}
-            backApp1={'NodeJS.svg'}
+            images={['HTML.svg', 'CSS.svg', 'JavaScript.svg']}
           />
         </div>
 
-        <br />
-        <div className="Title-container">
-          <img src="Skills.svg" alt="" />
+        <div className="Title-container margin-top">
+          <img src="Skills.svg" alt="Skills icon" />
 
           <h1>Habilidades</h1>
         </div>
 
         <hr />
-        <br />
 
         <div className="skills-container">
-          <div className="Title-container">
-            <img src="Learning.svg" alt="" />
-            <h1>Frontend</h1>
+          <div className="Title-container ">
+            <img src="Learning.svg" alt="Learning icon" />
+            <h2>Frontend</h2>
           </div>
 
           <div className="skills-container-div">
             <CardSkills image="HTML.svg" name="HTML" color="#e34f26" />
-            <CardSkills image="CSS.svg" name="CSS" color="#0c73b8"></CardSkills>
+            <CardSkills image="CSS.svg" name="CSS" color="#0c73b8" />
             <CardSkills
               image="JavaScript.svg"
               name="JavaScript"
@@ -215,11 +229,10 @@ function App() {
               color="#00D8FF"
             ></CardSkills>
           </div>
-          {/* <br /> */}
 
           <div className="Title-container">
-            <img src="Learning.svg" alt="" />
-            <h1>Backend</h1>
+            <img src="Learning.svg" alt="Learning icon" />
+            <h2>Backend</h2>
           </div>
 
           <div className="skills-container-div">
@@ -245,10 +258,9 @@ function App() {
             ></CardSkills>
           </div>
         </div>
-        <br />
 
-        <div className="Title-container">
-          <img src="AboutME.svg" alt="" />
+        <div className="Title-container margin-top">
+          <img src="AboutME.svg" alt="About me icon" />
           <h1>Sobre mi</h1>
         </div>
 
@@ -263,35 +275,42 @@ function App() {
         </p>
 
         <div className="Title-container">
-          <img src="Contact.svg" alt="" />
+          <img src="Contact.svg" alt="Contact icon" />
           <h1>Contacto</h1>
         </div>
 
-        <hr />
-        <br />
+        <hr className="margin-bottom" />
 
         <div className="projects-container">
           <a
             href="https://www.linkedin.com/in/santiago-monta%C3%B1o-38a786144/"
             target="_blank"
+            title="Santiago Montaño's LinkedIn profile"
           >
             <CardSkills image="Linkedin.svg" name="LinkedIn" color="#0a66c2" />
           </a>
 
-          <a href="https://github.com/sant-c137" target="_blank">
+          <a
+            href="https://github.com/sant-c137"
+            target="_blank"
+            title="Santiago Montaño's GitHub profile"
+          >
             <CardSkills image="Github.svg" name="Github" color="#aaa" />
           </a>
 
-          <a href="mailto:santiam234@gmail.com" target="_blank">
+          <a
+            href="mailto:santiam234@gmail.com"
+            target="_blank"
+            title="Send an email to Santiago Montaño"
+          >
             <CardSkills image="Mail.svg" name="Email" color="#8d93a5" />
           </a>
         </div>
-        <br />
-        <hr />
+        <hr className="margin-top" />
         <footer>
           <span>Casi todos los derechos reservados.</span>
-          <span> Hecho con 🩵 por Sant.</span>
-          <span>@2024</span>
+          <span> Hecho con {theme ? '💚' : '💙'} por Sant.</span>
+          <span>@{year}</span>
         </footer>
       </div>
     </div>

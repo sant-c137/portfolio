@@ -57,6 +57,9 @@
 
 .pagina-color-3 {
   background-color: var(--pagina-color-3);
+  background-color: #ffbd2e;
+  background-color: #ff5f57;
+  background-color: #28ca42;
 }
 
 .pagina-icons-nav {
@@ -88,8 +91,8 @@
   }
 }
 
-.Arrow-Left,
 .Arrow-Right {
+  transform: rotate(180deg);
   height: 1.1rem;
   transition: all 0.3s ease-in-out;
   background-color: var(--primary-color);
@@ -231,6 +234,7 @@
   box-shadow: var(--card-shadow);
   margin-bottom: 10px;
   border-radius: 1rem;
+  backdrop-filter: blur(800px);
 
   justify-content: center;
   align-items: center;
@@ -249,7 +253,7 @@
 
     &:hover {
       width: 32rem;
-      height: 39rem;
+      height: 37rem;
     }
   }
 
