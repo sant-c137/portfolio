@@ -175,7 +175,7 @@ function App() {
             name={'Acit'}
             url={'https://acit-frontend.vercel.app/'}
             logo={'AcitLogo.svg'}
-            // websiteImage={'Web_1.webp'}
+            websiteImage={'Web_1.webp'}
             description={
               'Este proyecto fue creado para una empresa cuyo enfoque era crear una plataforma de cursos de las tecnologías de la información.'
             }
@@ -193,7 +193,7 @@ function App() {
             name={'Bezier curves'}
             url={'https://sant-c137.github.io/BezierCurvesJS/'}
             logo={'AcitLogo.svg'}
-            // websiteImage={'Web_2.webp'}
+            websiteImage={'Web_2.webp'}
             description={
               'Este proyecto fue creado para crear una implementación gráfica e interactiva de las curvas de Bezier.'
             }
