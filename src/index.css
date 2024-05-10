@@ -36,6 +36,11 @@
     -4px -4px 8px 0 rgba(224, 224, 255, 0.04), 0 1px 1px 0 rgba(9, 13, 20, 0.4);
 
   --section-background: #00e7a5;
+
+  --svg-primary-filter: invert(92%) sepia(66%) saturate(3772%)
+    hue-rotate(132deg) brightness(123%) contrast(81%);
+  --svg-secondary-filter: invert(13%) sepia(0%) saturate(14%) hue-rotate(85deg)
+    brightness(7%) contrast(97%);
 }
 
 @media (prefers-color-scheme: light) {
@@ -67,6 +72,11 @@
     --card-shadow: 1px 1px 16px 0 #ccc;
 
     --section-background: #049baf;
+
+    --svg-primary-filter: invert(54%) sepia(14%) saturate(1511%)
+      hue-rotate(111deg) brightness(111%) contrast(107%);
+    --svg-secondary-filter: invert(96%) sepia(31%) saturate(489%)
+      hue-rotate(178deg) brightness(212%) contrast(100%);
   }
 }
 

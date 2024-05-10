@@ -166,6 +166,16 @@ h1 {
   }
 }
 
+.svg-primary {
+  color: #05213f;
+  filter: var(--svg-primary-filter);
+}
+
+.svg-secondary {
+  color: #05213f;
+  filter: var(--svg-secondary-filter);
+}
+
 .child {
   width: 5rem;
   height: 5rem;

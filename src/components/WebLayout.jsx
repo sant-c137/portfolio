@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import './WebLayout.css';
 
 export const WebLayout = ({
@@ -9,6 +9,8 @@ export const WebLayout = ({
   description,
   images = [],
 }) => {
+  const { t } = useTranslation('global');
+
   return (
     <>
       <div className="projects-container-show">
@@ -56,7 +58,7 @@ export const WebLayout = ({
         </div>
 
         <div className="info-projects">
-          <h2>Acerca del proyecto:</h2>
+          <h2>{t('WebLayout.about-project')}</h2>
           <p>{description}</p>
           <h2>Tecnologías usadas:</h2>
 
@@ -71,17 +73,6 @@ export const WebLayout = ({
   );
 };
 
-WebLayout.propTypes = {
-  name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
-  websiteImage: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(PropTypes.string),
-};
 
-WebLayout.defaultProps = {
-  images: [],
-};
 
 export default WebLayout;
