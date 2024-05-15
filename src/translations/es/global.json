@@ -1,5 +1,30 @@
 {
+  "Main": {
+    "hi-i'm": "Hola, soy",
+    "student-of": "Estudiante de la carrera de",
+    "software-engineering": "ingeniería de software",
+    "passionate-about": "apasionado por",
+    "learning": "aprender",
+    "creating": "crear",
+    "technologies": "las tecnologías",
+    "that-facilitate": "que facilitan",
+    "our-life": "nuestra vida",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "about-me": "Sobre mi",
+    "about-me-text": "Me llamo Santiago Montaño y soy un estudiante de Ingeniería de Software apasionado por aprender las tecnologías web. Actualmente estoy enfocado en aprender a profundidad tecnologías web del ámbito del frontend para posteriormente aprender backend. Ya que cada vez que aprendo algo nuevo me doy cuenta que estoy en donde quiero estar.",
+    "contact": "Contacto"
+  },
   "WebLayout": {
-    "about-project": "Acerca del proyecto:"
+    "about-project": "Sobre el proyecto:",
+    "this-project": "Este proyecto fue creado",
+    "technologies-used": "Tecnologías usadas:"
+  },
+  "Footer": {
+    "almost-all-rights": "Casi todos los derechos reservados.",
+    "made-with": "Hecho con",
+    "by": "por Sant."
   }
 }

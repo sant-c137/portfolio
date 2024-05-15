@@ -60,7 +60,7 @@ export const WebLayout = ({
         <div className="info-projects">
           <h2>{t('WebLayout.about-project')}</h2>
           <p>{description}</p>
-          <h2>Tecnologías usadas:</h2>
+          <h2>{t('WebLayout.technologies-used')}</h2>
 
           <div className="tools-container-cards">
             {images.map((tools, index) => (
@@ -72,7 +72,5 @@ export const WebLayout = ({
     </>
   );
 };
-
-
 
 export default WebLayout;

@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react';
 import { CardSkills } from './components/CardSkills';
 import { WebLayout } from './components/WebLayout';
 import { Header } from './components/Header';
+import { useTranslation } from 'react-i18next';
 import './App.css';
 
 function App() {
   const [theme, setTheme] = useState('');
   const [year, setYear] = useState('');
+
+  const { t } = useTranslation('global');
 
   useEffect(() => {
     const prefersDarkMode =
@@ -116,8 +119,9 @@ function App() {
     };
   }, []);
 
+
   return (
-    <div className="container">
+    <div className= {`container ${theme}`} >
       <div className="child color-1 zoomElement">1</div>
       <div className="child color-2 zoomElement">2</div>
       <div className="child color-3 zoomElement">3</div>
@@ -142,14 +146,17 @@ function App() {
       <div className="banner">
         <div className="Title">
           <div>
-            <span>Hola, soy&nbsp;</span>
+            <span>{t("Main.hi-i'm")}&nbsp;</span>
             <h1>Sant</h1>
 
             <p>
-              Estudiante de la carrera de{' '}
-              <strong>ingeniería de software</strong>, apasionado por{' '}
-              <strong>aprender</strong> y <strong>crear </strong>
-              las tecnologías que facilitan nuestra vida.
+              {t('Main.student-of')}{' '}
+              <strong>{t('Main.software-engineering')}</strong>,&nbsp;
+              {t('Main.passionate-about')} <strong>{t('Main.learning')}</strong>{' '}
+              and&nbsp;
+              <strong>{t('Main.creating')}</strong> {t('Main.technologies')}
+              &nbsp;
+              {t('Main.that-facilitate')} {t('Main.our-life')}.
             </p>
           </div>
 
@@ -194,7 +201,7 @@ function App() {
             />
           </svg>
 
-          <h1 id='to-projects'>Proyectos</h1>
+          <h1 id="projects">{t('Main.projects')}</h1>
         </div>
 
         <hr className="margin-bottom" />
@@ -206,6 +213,10 @@ function App() {
             logo={'AcitLogo.svg'}
             websiteImage={'Web_1.webp'}
             description={
+              t('WebLayout.this-project') +
+              ' ' +
+              t('WebLayout.about-project') +
+              ' ' +
               'Este proyecto fue creado para una empresa cuyo enfoque era crear una plataforma de cursos de las tecnologías de la información.'
             }
             images={[
@@ -224,6 +235,10 @@ function App() {
             logo={'AcitLogo.svg'}
             websiteImage={'Web_2.webp'}
             description={
+              t('WebLayout.this-project') +
+              ' ' +
+              t('WebLayout.about-project') +
+              ' ' +
               'Este proyecto fue creado para crear una implementación gráfica e interactiva de las curvas de Bezier.'
             }
             images={['HTML.svg', 'CSS.svg', 'JavaScript.svg']}
@@ -268,7 +283,7 @@ function App() {
             ></path>
           </svg>
 
-          <h1 id='to-skills'>Habilidades</h1>
+          <h1 id="skills">{t('Main.skills')}</h1>
         </div>
 
         <hr />
@@ -425,18 +440,12 @@ function App() {
               fill="currentColor"
             />
           </svg>
-          <h1 id='to-about-me'>Sobre mi</h1>
+          <h1 id="about-me">{t('Main.about-me')}</h1>
         </div>
 
         <hr />
 
-        <p className="About-me-text">
-          Me llamo Santiago Montaño y soy un estudiante de Ingeniería de
-          Software apasionado por aprender las tecnologías web. Actualmente
-          estoy enfocado en aprender a profundidad tecnologías web del ámbito
-          del frontend para posteriormente aprender backend. Ya que cada vez que
-          aprendo algo nuevo me doy cuenta que estoy en donde quiero estar.
-        </p>
+        <p className="About-me-text">{t('Main.about-me-text')}</p>
 
         <div className="Title-container">
           <svg
@@ -460,7 +469,7 @@ function App() {
               fill="currentColor"
             />
           </svg>
-          <h1 id='to-contact'>Contacto</h1>
+          <h1 id="contact">{t('Main.contact')}</h1>
         </div>
 
         <hr className="margin-bottom" />
@@ -492,14 +501,16 @@ function App() {
         </div>
         <hr className="margin-top" />
         <footer className="margin-bottom">
-          <span>Casi todos los derechos reservados.</span>
-          <span> Hecho con {theme ? '💚' : '💙'} por Sant.</span>
+          <span>{t('Footer.almost-all-rights')}</span>
+          <span>
+            {' '}
+            {t('Footer.made-with')} {theme ? '💚' : '💙'} {t('Footer.by')}
+          </span>
           <span>@{year}</span>
         </footer>
       </div>
 
-      <Header/>
-      
+      <Header />
     </div>
   );
 }

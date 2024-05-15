@@ -25,7 +25,7 @@
   overflow: auto;
   scrollbar-width: none;
   background-color: var(--main-background-color);
-
+  
   &:hover {
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) transparent;

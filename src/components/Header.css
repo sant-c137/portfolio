@@ -32,3 +32,9 @@
   border: 1px solid var(--border-color);
   height: 2rem;
 }
+
+.button-change-lng {
+  border: none;
+  background: none;
+
+}
