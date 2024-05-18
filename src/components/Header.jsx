@@ -1,13 +1,41 @@
-import { useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { LanguageContext } from '../LanguageContext';
 import './Header.css';
 
 export const Header = () => {
+  const [theme, setTheme] = useState('light');
   const { language, handleChangeLanguage } = useContext(LanguageContext);
 
   const toggleLanguage = () => {
     const newLanguage = language === 'es' ? 'en' : 'es';
     handleChangeLanguage(newLanguage);
+  };
+
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  useEffect(() => {
+    const banner = document.getElementById('container');
+    const mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const handleColorSchemeChange = (event) => {
+      setTheme(event.matches ? 'dark' : 'light');
+    };
+
+    mediaQueryList.addEventListener('change', handleColorSchemeChange);
+
+    setTheme(isDarkMode ? 'dark' : 'light');
+
+    banner.classList.toggle('dark', isDarkMode);
+
+    return () => {
+      mediaQueryList.removeEventListener('change', handleColorSchemeChange);
+    };
+  }, [isDarkMode]);
+
+  const handleChangeTheme = () => {
+    const banner = document.getElementById('container');
+
+    banner.classList.toggle('dark');
   };
 
   return (
@@ -161,8 +189,7 @@ export const Header = () => {
           </svg>
         </button>
 
-        <button  className="button-change-lng" >
-
+        <button className="button-change-theme" onClick={handleChangeTheme}>
           <svg
             width="3rem"
             height="3rem"
@@ -189,7 +216,6 @@ export const Header = () => {
               </g>
             </g>
           </svg>
-
         </button>
       </header>
     </>

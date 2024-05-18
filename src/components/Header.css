@@ -20,21 +20,21 @@
   & svg {
     transition: all 0.2s ease-in-out;
     opacity: 0.5;
-    
+
     &:hover {
       opacity: 1;
-      transform: translate(0px, -20%);;
+      transform: translate(0px, -20%);
     }
   }
 }
 
 .separation-line {
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--separation-line);
   height: 2rem;
 }
 
-.button-change-lng {
+.button-change-lng,
+.button-change-theme {
   border: none;
   background: none;
-
 }

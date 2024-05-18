@@ -1,9 +1,48 @@
 :root {
   font-size: 16px;
+  color-scheme: dark light;
+
+  --banner-bg-color: #ffffff;
+  --gradient-color1: #0107f3;
+  --gradient-color2: #05ef88;
+  --gradient-direction: 135deg;
+
+  --main-background-color: #f5f5f5;
+  --primary-color: #ffffff;
+  --border-color: #cccccc;
+  --hover-color: #e0e0e0;
+  --text-color: #000000;
+
+  --sub-title-color: #004ead;
+  --highlight-color: #004ead;
+  --separation-line: #cccccc;
+
+  --shape-color-1: #ff3333;
+  --shape-color-2: #3333ff;
+  --shape-color-3: #ffcc00;
+  --shape-color-4: #33cc33;
+  --shape-color-5: #cc33cc;
+  --shape-color-6: #66cc00;
+
+  --font-main-title: 'Bebas Neue', sans-serif;
+  --font-titles: 'Cairo Variable', sans-serif;
+  --font-body: 'Montserrat Variable', sans-serif;
+
+  --image-profile-shadow: 0rem 0rem 8rem #0105f38b;
+  --card-shadow: 1px 1px 16px 0 #ccc;
+
+  --section-background: #049baf;
+
+  --svg-primary-filter: invert(54%) sepia(14%) saturate(1511%)
+    hue-rotate(111deg) brightness(111%) contrast(107%);
+  --svg-secondary-filter: invert(96%) sepia(31%) saturate(489%)
+    hue-rotate(178deg) brightness(212%) contrast(100%);
+}
+
+.dark {
   color-scheme: dark;
 
   --banner-bg-color: #201e1e;
-
   --gradient-color1: #00fe3b;
   --gradient-color2: #00d4ff;
   --gradient-direction: 120deg;
@@ -13,8 +52,10 @@
   --border-color: #05213f;
   --hover-color: #4a6182;
   --text-color: #fff;
+
   --sub-title-color: var(--gradient-color2);
   --highlight-color: #00e7a5;
+  --separation-line: #2e3c51;
 
   --pagina-color-1: #ff5f57;
   --pagina-color-2: #ffbd2e;
@@ -41,43 +82,6 @@
     hue-rotate(132deg) brightness(123%) contrast(81%);
   --svg-secondary-filter: invert(13%) sepia(0%) saturate(14%) hue-rotate(85deg)
     brightness(7%) contrast(97%);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-
-    --banner-bg-color: #ffffff;
-    --gradient-color1: #0107f3;
-    --gradient-color2: #05ef88;
-    --gradient-direction: 135deg;
-
-    --main-background-color: #f5f5f5;
-    --primary-color: #ffffff;
-    --border-color: #cccccc;
-    --hover-color: #e0e0e0;
-    --text-color: #000000;
-
-    --sub-title-color: #004ead;
-    --highlight-color: #004ead;
-
-    --shape-color-1: #ff3333;
-    --shape-color-2: #3333ff;
-    --shape-color-3: #ffcc00;
-    --shape-color-4: #33cc33;
-    --shape-color-5: #cc33cc;
-    --shape-color-6: #66cc00;
-
-    --image-profile-shadow: 0rem 0rem 8rem #0105f38b;
-    --card-shadow: 1px 1px 16px 0 #ccc;
-
-    --section-background: #049baf;
-
-    --svg-primary-filter: invert(54%) sepia(14%) saturate(1511%)
-      hue-rotate(111deg) brightness(111%) contrast(107%);
-    --svg-secondary-filter: invert(96%) sepia(31%) saturate(489%)
-      hue-rotate(178deg) brightness(212%) contrast(100%);
-  }
 }
 
 ::selection {

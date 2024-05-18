@@ -12,11 +12,11 @@ function App() {
   const { t } = useTranslation('global');
 
   useEffect(() => {
-    const prefersDarkMode =
+    const prefersMode =
       window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches;
+      window.matchMedia('(prefers-color-scheme: )').matches;
 
-    setTheme(prefersDarkMode);
+    setTheme(prefersMode);
 
     const now = new Date();
     const currentYear = now.getFullYear();
@@ -55,6 +55,8 @@ function App() {
         child.style.left = left + 'px';
         child.style.top = top + 'px';
       });
+
+      window.scrollTo(0, 0);
     }
 
     // Llama a la función para posicionar elementos cuando se carga la página
@@ -119,9 +121,8 @@ function App() {
     };
   }, []);
 
-
   return (
-    <div className= {`container ${theme}`} >
+    <div className="container ">
       <div className="child color-1 zoomElement">1</div>
       <div className="child color-2 zoomElement">2</div>
       <div className="child color-3 zoomElement">3</div>
