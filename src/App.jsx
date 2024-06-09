@@ -56,7 +56,7 @@ function App() {
         child.style.top = top + 'px';
       });
 
-      window.scrollTo(0, 0);
+      //window.scrollTo(0, 0);
     }
 
     // Llama a la función para posicionar elementos cuando se carga la página
