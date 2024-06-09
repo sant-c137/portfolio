@@ -19,7 +19,8 @@
   },
   "WebLayout": {
     "about-project": "About project:",
-    "this-project": "This project was created",
+    "description-1": "This project was created for a company whose focus was to create an IT technology course platform.",
+    "description-2": "This project was created to develop a graphical and interactive implementation of Bezier curves.",
     "technologies-used": "Technologies used:"
   },
   "Footer": {

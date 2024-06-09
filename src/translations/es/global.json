@@ -18,9 +18,11 @@
     "contact": "Contacto"
   },
   "WebLayout": {
-    "about-project": "Sobre el proyecto:",
-    "this-project": "Este proyecto fue creado",
-    "technologies-used": "Tecnologías usadas:"
+    "about-project": "About project:",
+    "this-project": "This project was created",
+    "description-1": "Este proyecto fue creado para una empresa cuyo enfoque era crear una plataforma de cursos de las tecnologías de la información.",
+    "description-2": "Este proyecto fue creado para crear una implementación gráfica e interactiva de las curvas de Bezier.",
+    "technologies-used": "Technologies used:"
   },
   "Footer": {
     "almost-all-rights": "Casi todos los derechos reservados.",

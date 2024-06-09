@@ -90,94 +90,25 @@
   color: transparent;
 }
 
-@media (width < 400px) {
-  .color-7 {
-    display: none;
-  }
-  .color-8 {
-    display: none;
-  }
-  .color-9 {
-    display: none;
-  }
-  .color-10 {
-    display: none;
-  }
-  .color-11 {
-    display: none;
-  }
-  .color-12 {
-    display: none;
-  }
-
-  .color-13 {
-    display: none;
-  }
-  .color-14 {
-    display: none;
-  }
-  .color-15 {
-    display: none;
-  }
-  .color-16 {
-    display: none;
-  }
-  .color-17 {
-    display: none;
-  }
-  .color-18 {
-    display: none;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* transition: all 0.3s ease; */
+  transition: background-color 0.3s, color 0.3s, filter 0.3s ease-in-out;
 }
 
-@media (width < 900px) {
-  :root {
-    font-size: 13px;
+@media (width < 500px) {
+  .child {
+    display: none;
   }
-}
 
-@media (width < 750px) {
   :root {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .banner {
-    padding: 15% 8% 1% 8%;
+    padding: 0% 10% 5% 10%;
   }
 }
 
-@media (width < 510px) {
-  :root {
-    font-size: 11px;
-  }
-
-  .banner {
-    padding: 20% 8% 1% 8%;
-  }
-}
-
-@media (width < 430px) {
-  :root {
-    font-size: 9px;
-  }
-}
-
-@media (width < 370px) {
-  :root {
-    font-size: 8px;
-  }
-}
-
-@media (width < 300px) {
-  :root {
-    font-size: 6px;
-  }
-}
-
-@media (width < 200px) {
-  :root {
-    font-size: 4px;
-  }
-}
-
-/* jikah66633@idsho.com */

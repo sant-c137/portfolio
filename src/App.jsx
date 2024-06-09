@@ -168,8 +168,6 @@ function App() {
           />
         </div>
 
-        <br />
-        <br />
 
         <div className="Title-container">
           <svg
@@ -214,11 +212,7 @@ function App() {
             logo={'AcitLogo.svg'}
             websiteImage={'Web_1.webp'}
             description={
-              t('WebLayout.this-project') +
-              ' ' +
-              t('WebLayout.about-project') +
-              ' ' +
-              'Este proyecto fue creado para una empresa cuyo enfoque era crear una plataforma de cursos de las tecnologías de la información.'
+              t('WebLayout.description-1') 
             }
             images={[
               'HTML.svg',
@@ -235,13 +229,7 @@ function App() {
             url={'https://sant-c137.github.io/BezierCurvesJS/'}
             logo={'AcitLogo.svg'}
             websiteImage={'Web_2.webp'}
-            description={
-              t('WebLayout.this-project') +
-              ' ' +
-              t('WebLayout.about-project') +
-              ' ' +
-              'Este proyecto fue creado para crear una implementación gráfica e interactiva de las curvas de Bezier.'
-            }
+            description={t('WebLayout.description-2')}
             images={['HTML.svg', 'CSS.svg', 'JavaScript.svg']}
           />
         </div>
