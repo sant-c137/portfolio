@@ -154,7 +154,7 @@ function App() {
               {t('Main.student-of')}{' '}
               <strong>{t('Main.software-engineering')}</strong>,&nbsp;
               {t('Main.passionate-about')} <strong>{t('Main.learning')}</strong>{' '}
-              and&nbsp;
+              {t('Main.and')} {' '}
               <strong>{t('Main.creating')}</strong> {t('Main.technologies')}
               &nbsp;
               {t('Main.that-facilitate')} {t('Main.our-life')}.
